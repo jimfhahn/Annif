@@ -28,7 +28,7 @@ install:
 - if [[ $TRAVIS_PYTHON_VERSION != '3.7' ]]; then pip install .[nn]; fi
 # Install the optional Omikuji and Yake dependencies
 # - except for one Python version (3.7) so that we can test also without them
-- if [[ $TRAVIS_PYTHON_VERSION != '3.7' ]]; then pip install .[omikuji] .[yake]; fi
+- if [[ $TRAVIS_PYTHON_VERSION != '3.7' ]]; then pip install .[omikuji,yake]; fi
 # Install the optional fastText dependencies for Python 3.7 only
 - if [[ $TRAVIS_PYTHON_VERSION == '3.7' ]]; then pip install .[fasttext]; fi
 # For Python 3.6, install the optional dependencies that depend on system libraries
